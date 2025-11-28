@@ -24,12 +24,14 @@ class HomeView extends ConsumerWidget {
           sliver: SliverToBoxAdapter(
             child: Text(
               'Projetos de destaque',
-              style: Theme.of(
-                context,
-              ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium
+                  ?.copyWith(fontWeight: FontWeight.bold),
             ),
           ),
         ),
+
         SliverToBoxAdapter(
           child: SizedBox(
             height: 200,
@@ -37,33 +39,45 @@ class HomeView extends ConsumerWidget {
               itemSnapping: true,
               itemExtent: 300,
               children: [
-                Container(
-                  color: Colors.red.shade500,
-                  child: Placeholder(color: Colors.red.shade200),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                Container(
-                  color: Colors.green.shade500,
-                  child: Placeholder(color: Colors.green.shade200),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    'https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                Container(
-                  color: Colors.blue.shade500,
-                  child: Placeholder(color: Colors.blue.shade200),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ],
             ),
           ),
         ),
+
         SliverPadding(
           padding: const EdgeInsets.all(16),
           sliver: SliverToBoxAdapter(
             child: Text(
               'Projetos de destaque',
-              style: Theme.of(
-                context,
-              ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium
+                  ?.copyWith(fontWeight: FontWeight.bold),
             ),
           ),
         ),
+
         SliverToBoxAdapter(
           child: SizedBox(
             height: 200,
@@ -72,16 +86,31 @@ class HomeView extends ConsumerWidget {
               itemExtent: 300,
               children: [
                 Container(
-                  color: Colors.red.shade500,
-                  child: Placeholder(color: Colors.red.shade200),
+                  decoration: BoxDecoration(
+                    color: Colors.purple.shade400,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Placeholder(
+                    color: Colors.purple.shade100,
+                  ),
                 ),
                 Container(
-                  color: Colors.green.shade500,
-                  child: Placeholder(color: Colors.green.shade200),
+                  decoration: BoxDecoration(
+                    color: Colors.orange.shade400,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Placeholder(
+                    color: Colors.orange.shade100,
+                  ),
                 ),
                 Container(
-                  color: Colors.blue.shade500,
-                  child: Placeholder(color: Colors.blue.shade200),
+                  decoration: BoxDecoration(
+                    color: Colors.teal.shade400,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Placeholder(
+                    color: Colors.teal.shade100,
+                  ),
                 ),
               ],
             ),
