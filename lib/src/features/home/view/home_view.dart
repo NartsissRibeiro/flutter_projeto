@@ -87,11 +87,8 @@ class HomeView extends ConsumerWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.purple.shade400,
+                    color: const Color.fromARGB(255, 227, 167, 238),
                     borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Placeholder(
-                    color: Colors.purple.shade100,
                   ),
                 ),
                 Container(
